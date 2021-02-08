@@ -1,3 +1,39 @@
-body {
-    background-color: aquamarine;
+* {
+    border: 1px solid red;
 }
+body {
+    background: rgb(125, 125, 125);
+}
+
+.container {
+    border: 3px solid rgb(0, 255, 8);
+}
+
+.top-container {
+    border: 3px solid blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+img {
+    width: 700px;
+    min-width: 400px;
+}
+
+#reset, #start {
+    background-color: azure;
+    padding: 5px 15px;
+    border: 3px solid blue;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+#score, #hints {
+    background-color: azure;
+    padding: 5px 15px;
+    border: 3px solid blue;
+    border-radius: 10px;
+    margin: 20px;
+}
+
