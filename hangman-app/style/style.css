@@ -46,4 +46,17 @@ h1 {
     margin: 20px;
 }
 
+/* LETTERS */
 
+.letter, .letter-selected {
+    width: 3vw;
+    height: 3vw;
+    border-radius: .5vw;
+    border: 3px solid red;
+    background: white;
+    color: black;
+}
+
+.letter-selected {
+    opacity: .7;
+}
