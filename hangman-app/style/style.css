@@ -1,8 +1,12 @@
 * {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 body {
     background: rgb(125, 125, 125);
+}
+
+h1 {
+    text-align: center;
 }
 
 .container {
@@ -13,12 +17,17 @@ body {
     border: 3px solid blue;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
 }
 
-img {
-    width: 700px;
-    min-width: 400px;
+#image {
+    width: 40%;
+    border: 3px solid rgb(0, 229, 255);
+}
+
+#image img {
+    width: 100%;
+    min-width: 200px;
 }
 
 #reset, #start {
@@ -36,4 +45,5 @@ img {
     border-radius: 10px;
     margin: 20px;
 }
+
 
