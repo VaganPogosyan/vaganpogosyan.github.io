@@ -54,13 +54,15 @@ $(() => {
             for (i = 0; i < $actor.length; i++) {
                 if ($wordLetter.text() === $actor.text()[i]) {
                     $($actor[i]).removeClass('hidden-letter').addClass('word-letter');
-                    console.log($actor);
-                } else {
-                    console.log('sup');
                 }
+            }
+            // if user clicked wrong letter hangman draws a limb
+            if ($actor.text().includes($wordLetter.text()) === false) {
+                $('#image').attr('src', 'style/img/Hangman_1.jpg');
             }
         });
 
+        // $('#image').attr('src', 'style/img/Hangman_1.jpg');
 
 
         // buttons RESET 

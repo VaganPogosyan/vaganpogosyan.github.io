@@ -20,12 +20,12 @@ h1 {
     justify-content: center;
 }
 
-#image {
+#div-image {
     width: 40%;
     border: 3px solid rgb(0, 229, 255);
 }
 
-#image img {
+#image {
     width: 100%;
     min-width: 200px;
 }
