@@ -12,26 +12,22 @@ $(() => {
         $('.hidden-letter').remove();
         $('.hidden-space').remove();
         $('.word-letter').remove();
+        $('.missed-letter').remove();
         startGame();
         $('#image').attr('src', 'style/img/Hangman_Empty.jpg');
     }
+
+
+    const $wordsArr = ['BRAD PITT', 'AL PACINO', 'MONICA BELUCCI', 'JENNIFER ANISTON', 'ANNE HATHAWAY', 'DENZEL WASHINGTON', 'MATHEW MCCONAUGHEY', 'JOAQUIN PHOENIX', 'LUPITA NYONGO', 'RYAN REYNOLDS', 'HUGH JACKMAN', 'SCARLET JOHANSSON', 'LEONARDO DICAPRIO', 'CHADWICK BOSEMAN'];
 
     // function START
     const startGame = (e) => {
         $('.letter').removeClass('letter-selected');
         $('#start').addClass('start-clicked');
         // ***** add empty border-bottoms for each letter of the hidden word
-        const $wordsArr = ['BRAD PITT', 'AL PACINO', 'MONICA BELUCCI', 'JENNIFER ANISTON', 'ANNE HATHAWAY', 'DENZEL WASHINGTON', 'MATHEW MCCONAUGHEY', 'JOAQUIN PHOENIX', 'LUPITA NYONGO', 'RYAN REYNOLDS', 'HUGH JACKMAN', 'SCARLET JOHANSSON', 'LEONARDO DICAPRIO', 'CHADWICK BOSEMAN'];
+
 
         const $randomIndex = Math.floor(Math.random() * $wordsArr.length);
-
-        // ***** add clicked letters to word div
-        // $('.letter').one('click', (e) => {
-        //     $(e.currentTarget).addClass('letter-selected');
-        //     const $wordLetter = $(e.currentTarget);
-        //     $wordLetter.clone().appendTo($('#word')).removeClass().addClass('word-letter');
-        // });
-
 
         if ($('#word') !== '') {
             // get element from the array
@@ -48,6 +44,10 @@ $(() => {
             };
         };
 
+        // remove word from the array so it won't show up as a next hidden word
+        $wordsArr.splice($randomIndex, 1);
+        console.log($wordsArr);
+
         let $count = 0;
         $('.letter').one('click', (e) => {
             $(e.currentTarget).addClass('letter-selected');
@@ -60,7 +60,6 @@ $(() => {
                 }
             }
 
-            // let $count = 0;
             const $hangmanImages = ['style/img/Hangman_1.jpg', 'style/img/Hangman_2.jpg', 'style/img/Hangman_3.jpg', 'style/img/Hangman_4.jpg', 'style/img/Hangman_5.jpg', 'style/img/Hangman_6.jpg', 'style/img/Hangman_loose.jpg'];
 
             if ($actor.text().includes($wordLetter.text()) === false) {
@@ -84,7 +83,6 @@ $(() => {
                     $count++;
                 } else if ($count === 6) {
                     $('#image').attr('src', $hangmanImages[6]);
-
                     setTimeout(() => { alert('You Lost') }, 100);
                     $('.hidden-letter').removeClass('hidden-letter').addClass('missed-letter');
                     $count === 0;
@@ -96,10 +94,12 @@ $(() => {
         // $('#image').attr('src', 'style/img/Hangman_1.jpg');
 
 
-        // buttons RESET 
-        $('#reset').on('click', resetGame);
+
 
     };
+
+    // buttons RESET 
+    $('#reset').on('click', resetGame);
 
     // buttons START 
     $('#start').one('click', startGame);
