@@ -17,6 +17,7 @@ $(() => {
 
     // function START
     const startGame = (e) => {
+        $('.letter').removeClass('letter-selected');
         $('#start').addClass('start-clicked');
         // ***** add empty border-bottoms for each letter of the hidden word
         const $wordsArr = ['BRAD PITT', 'AL PACINO', 'MONICA BELUCCI', 'JENNIFER ANISTON', 'ANNE HATHAWAY', 'DENZEL WASHINGTON', 'MATHEW MCCONAUGHEY', 'JOAQUIN PHOENIX', 'LUPITA NYONGO', 'RYAN REYNOLDS', 'HUGH JACKMAN', 'SCARLET JOHANSSON', 'LEONARDO DICAPRIO', 'CHADWICK BOSEMAN'];
@@ -51,16 +52,26 @@ $(() => {
             $(e.currentTarget).addClass('letter-selected');
             const $wordLetter = $(e.currentTarget);
             const $actor = $('.hidden-letter');
+
             for (i = 0; i < $actor.length; i++) {
                 if ($wordLetter.text() === $actor.text()[i]) {
                     $($actor[i]).removeClass('hidden-letter').addClass('word-letter');
                 }
             }
             // if user clicked wrong letter hangman draws a limb
+
+            const $hangmanImages = ['style/img/Hangman_1.jpg', 'style/img/Hangman_2.jpg']
             if ($actor.text().includes($wordLetter.text()) === false) {
-                $('#image').attr('src', 'style/img/Hangman_1.jpg');
-            }
+                $('#image').attr('src', $hangmanImages[0]);
+                console.log('bam');
+            };
+
+
+
+
+
         });
+
 
         // $('#image').attr('src', 'style/img/Hangman_1.jpg');
 
