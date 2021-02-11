@@ -84,7 +84,9 @@ $(() => {
                     $count++;
                 } else if ($count === 6) {
                     $('#image').attr('src', $hangmanImages[6]);
+
                     setTimeout(() => { alert('You Lost') }, 100);
+                    $('.hidden-letter').removeClass('hidden-letter').addClass('missed-letter');
                     $count === 0;
                 }
             };
