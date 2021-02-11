@@ -23,24 +23,22 @@ $(() => {
 
 
     // add empty border-bottoms for each letter of the hidden word
-    const $wordsArr = ['BRAD PITT'];
+    const $wordsArr = ['BRAD PITT', 'AL PACINO', 'MONICA BELUCCI', 'JENNIFER ANISTON', 'ANNE HATHAWAY', 'DENZEL WASHINGTON', 'MATHEW MCCONAUGHEY', 'JOAQUIN PHOENIX', 'LUPITA NYONGO', 'RYAN REYNOLDS', 'HUGH JACKMAN', 'SCARLET JOHANSSON', 'LEONARDO DICAPRIO', 'CHADWICK BOSEMAN',];
 
+    const $randomIndex = Math.floor(Math.random() * $wordsArr.length);
 
-    for (let element of $wordsArr) {
-        for (let letter of element) {
-            const $hiddenLetter = $('<div>' + letter + '</div>');
-            if (letter === ' ') {
-                $($hiddenLetter).addClass('hidden-space');
-                $('#word').append($hiddenLetter);
-            } else {
-                $($hiddenLetter).addClass('hidden-letter');
-                $('#word').append($hiddenLetter);
-            }
-
-
+    // get element from the array
+    const $actor = $wordsArr[$randomIndex];
+    for (i = 0; i < $actor.length; i++) {
+        const $hiddenLetter = $('<div>' + $actor[i] + '</div>');
+        if ($actor[i] === ' ') {
+            $($hiddenLetter).addClass('hidden-space');
+            $('#word').append($hiddenLetter);
+        } else {
+            $($hiddenLetter).addClass('hidden-letter');
+            $('#word').append($hiddenLetter);
         }
-    }
-
+    };
 
 
 })
