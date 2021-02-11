@@ -48,7 +48,7 @@ $(() => {
             };
         };
 
-
+        let $count = 0;
         $('.letter').one('click', (e) => {
             $(e.currentTarget).addClass('letter-selected');
             const $wordLetter = $(e.currentTarget);
@@ -60,34 +60,37 @@ $(() => {
                 }
             }
 
-            /*
-            // if user clicked wrong letter hangman draws a limb
-            let $count = 0;
-            const $hangmanImages = ['style/img/Hangman_1.jpg', 'style/img/Hangman_2.jpg']
+            // let $count = 0;
+            const $hangmanImages = ['style/img/Hangman_1.jpg', 'style/img/Hangman_2.jpg', 'style/img/Hangman_3.jpg', 'style/img/Hangman_4.jpg', 'style/img/Hangman_5.jpg', 'style/img/Hangman_6.jpg', 'style/img/Hangman_loose.jpg'];
+
             if ($actor.text().includes($wordLetter.text()) === false) {
-                $('#image').attr('src', $hangmanImages[0]);
-                // console.log('bam');s
-                console.log($actor.text())
-                console.log($wordLetter.text())
-                $count++;
-                console.log($count);
-            };
-            */
-            $('.letter').on('click', () => {
-                const $hangmanImages = ['style/img/Hangman_1.jpg', 'style/img/Hangman_2.jpg']
-                let $count = 0;
-                if ($('.hidden-letter').text().includes($('.letter').text())) {
+                if ($count === 0) {
                     $('#image').attr('src', $hangmanImages[0]);
                     $count++;
-                    console.log($count);
+                } else if ($count === 1) {
+                    $('#image').attr('src', $hangmanImages[1]);
+                    $count++;
+                } else if ($count === 2) {
+                    $('#image').attr('src', $hangmanImages[2]);
+                    $count++;
+                } else if ($count === 3) {
+                    $('#image').attr('src', $hangmanImages[3]);
+                    $count++;
+                } else if ($count === 4) {
+                    $('#image').attr('src', $hangmanImages[4]);
+                    $count++;
+                } else if ($count === 5) {
+                    $('#image').attr('src', $hangmanImages[5]);
+                    $count++;
+                } else if ($count === 6) {
+                    $('#image').attr('src', $hangmanImages[6]);
+                    setTimeout(() => { alert('You Lost') }, 100);
+                    $count === 0;
                 }
-            });
+            };
 
 
         });
-
-
-
         // $('#image').attr('src', 'style/img/Hangman_1.jpg');
 
 
