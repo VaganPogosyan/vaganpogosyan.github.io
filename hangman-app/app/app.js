@@ -13,6 +13,7 @@ $(() => {
         $('.hidden-space').remove();
         $('.word-letter').remove();
         startGame();
+        $('#image').attr('src', 'style/img/Hangman_Empty.jpg');
     }
 
     // function START
@@ -58,19 +59,33 @@ $(() => {
                     $($actor[i]).removeClass('hidden-letter').addClass('word-letter');
                 }
             }
-            // if user clicked wrong letter hangman draws a limb
 
+            /*
+            // if user clicked wrong letter hangman draws a limb
+            let $count = 0;
             const $hangmanImages = ['style/img/Hangman_1.jpg', 'style/img/Hangman_2.jpg']
             if ($actor.text().includes($wordLetter.text()) === false) {
                 $('#image').attr('src', $hangmanImages[0]);
-                console.log('bam');
+                // console.log('bam');s
+                console.log($actor.text())
+                console.log($wordLetter.text())
+                $count++;
+                console.log($count);
             };
-
-
-
+            */
+            $('.letter').on('click', () => {
+                const $hangmanImages = ['style/img/Hangman_1.jpg', 'style/img/Hangman_2.jpg']
+                let $count = 0;
+                if ($('.hidden-letter').text().includes($('.letter').text())) {
+                    $('#image').attr('src', $hangmanImages[0]);
+                    $count++;
+                    console.log($count);
+                }
+            });
 
 
         });
+
 
 
         // $('#image').attr('src', 'style/img/Hangman_1.jpg');
