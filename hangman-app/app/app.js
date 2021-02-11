@@ -5,7 +5,6 @@ $(() => {
     for (let letter of $lettersArr) {
         const $letter = $('<div>' + letter + '<div>').addClass('letter');
         $('.letters').append($letter);
-        console.log($letter.text())
     }
 
     // function RESET
@@ -25,11 +24,12 @@ $(() => {
         const $randomIndex = Math.floor(Math.random() * $wordsArr.length);
 
         // ***** add clicked letters to word div
-        $('.letter').one('click', (e) => {
-            $(e.currentTarget).addClass('letter-selected');
-            const $wordLetter = $(e.currentTarget);
-            $wordLetter.clone().appendTo($('#word')).removeClass().addClass('word-letter');
-        });
+        // $('.letter').one('click', (e) => {
+        //     $(e.currentTarget).addClass('letter-selected');
+        //     const $wordLetter = $(e.currentTarget);
+        //     $wordLetter.clone().appendTo($('#word')).removeClass().addClass('word-letter');
+        // });
+
 
         if ($('#word') !== '') {
             // get element from the array
@@ -46,6 +46,23 @@ $(() => {
             };
         };
 
+
+        $('.letter').one('click', (e) => {
+            $(e.currentTarget).addClass('letter-selected');
+            const $wordLetter = $(e.currentTarget);
+            const $actor = $('.hidden-letter');
+            for (i = 0; i < $actor.length; i++) {
+                if ($wordLetter.text() === $actor.text()[i]) {
+                    $($actor[i]).removeClass('hidden-letter').addClass('word-letter');
+                    console.log($actor);
+                } else {
+                    console.log('sup');
+                }
+            }
+        });
+
+
+
         // buttons RESET 
         $('#reset').on('click', resetGame);
 
@@ -53,6 +70,9 @@ $(() => {
 
     // buttons START 
     $('#start').one('click', startGame);
+
+
+    // if text inside of letter === text inside of hidden-letter turn class hidden-letter to word-letter
 
 
 });
