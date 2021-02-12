@@ -5,7 +5,7 @@ SEI-19 Project 1: Hangman Game
 
 A word game where a player chooses letters from alphabet, if the hidden word contains chosen letter that letter opens up. The goal is to open the whole word before making 7 mistakes.
 
-Live site: https://vaganpogosyan.github.io/hangman-app/index.html
+Live site: https://vaganpogosyan.github.io/hangman-app
 
 ## Technologies Used
 * Languages - HTML5, CSS3, Javascript

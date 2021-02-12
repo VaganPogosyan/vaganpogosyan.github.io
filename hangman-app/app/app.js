@@ -82,26 +82,32 @@ $(() => {
                 if ($count === 0) {
                     $('#image').attr('src', $hangmanImages[0]);
                     $count = $count + 1;
+                    console.log('next ' + $count);
                     return;
                 } else if ($count === 1) {
                     $('#image').attr('src', $hangmanImages[1]);
                     $count = $count + 1;
+                    console.log('next ' + $count);
                     return;
                 } else if ($count === 2) {
                     $('#image').attr('src', $hangmanImages[2]);
                     $count = $count + 1;
+                    console.log('next ' + $count);
                     return;
                 } else if ($count === 3) {
                     $('#image').attr('src', $hangmanImages[3]);
                     $count = $count + 1;
+                    console.log('next ' + $count);
                     return;
                 } else if ($count === 4) {
                     $('#image').attr('src', $hangmanImages[4]);
                     $count = $count + 1;
+                    console.log('next ' + $count);
                     return;
                 } else if ($count === 5) {
                     $('#image').attr('src', $hangmanImages[5]);
                     $count = $count + 1;
+                    console.log('next ' + $count);
                     return;
                 } else if ($count === 6) {
                     // if user makes 7 mistakes he looses the game
@@ -110,6 +116,7 @@ $(() => {
                     // show all the letters user didn't guess
                     $('.hidden-letter').removeClass('hidden-letter').addClass('missed-letter');
                     // $count = 0;
+                    console.log('next ' + $count);
                     return;
                 }
             };
