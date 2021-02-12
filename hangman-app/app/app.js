@@ -10,6 +10,7 @@ $(() => {
 
     let $count = 0;
 
+
     // function RESET GAME
     const resetGame = () => {
         $('.hidden-letter').remove();
@@ -24,7 +25,7 @@ $(() => {
     const $wordsArr = ['BRAD PITT', 'AL PACINO', 'MONICA BELUCCI', 'JENNIFER ANISTON', 'ANNE HATHAWAY', 'DENZEL WASHINGTON', 'MATHEW MCCONAUGHEY', 'JOAQUIN PHOENIX', 'LUPITA NYONGO', 'RYAN REYNOLDS', 'HUGH JACKMAN', 'SCARLET JOHANSSON', 'LEONARDO DICAPRIO', 'CHADWICK BOSEMAN'];
 
     // function START
-    const startGame = (e) => {
+    const startGame = () => {
         $('.letter').removeClass('letter-selected');
         $('#start').addClass('start-clicked');
         // ***** add empty border-bottoms for each letter of the hidden word
@@ -52,7 +53,7 @@ $(() => {
         $wordsArr.splice($randomIndex, 1);
 
         // count of clicks should start from 0 everytime function startGame is executed
-        $count = 0;
+        // $count = $count * 0;
         // console.log($count);
 
         // user can click on a letter only once
@@ -75,8 +76,9 @@ $(() => {
             // array of images that will switch each time the user clicks on a wrong letter
             const $hangmanImages = ['style/img/Hangman_1.jpg', 'style/img/Hangman_2.jpg', 'style/img/Hangman_3.jpg', 'style/img/Hangman_4.jpg', 'style/img/Hangman_5.jpg', 'style/img/Hangman_6.jpg', 'style/img/Hangman_loose.jpg'];
 
-            // if the hidden word doesn't "include" the clicked letter image shanges to the next in the array
-            // every mistake adds up to variable "$count" so we could count how many mistakes user did
+            // if the hidden word doesn't "include" the clicked letter image changes to the next in the array
+            // every mistake adds up to variable "$count" so we could count how many mistakes user made
+            // if ($actor.text().includes($wordLetter.text()) === false) {
             if ($actor.text().includes($wordLetter.text()) === false) {
                 console.log($count);
                 if ($count === 0) {
@@ -115,7 +117,7 @@ $(() => {
                     setTimeout(() => { alert('You Lost. Hit the "Reset" button to reset the game.') }, 100);
                     // show all the letters user didn't guess
                     $('.hidden-letter').removeClass('hidden-letter').addClass('missed-letter');
-                    // $count = 0;
+                    $count = $count * 0;
                     console.log('next ' + $count);
                     return;
                 }
