@@ -19,6 +19,10 @@ Live site: https://vaganpogosyan.github.io/hangman-app/index.html
 * Reset button
 * Responsive design
 
+## Wireframe
+![Wireframe for hangman game]
+
+
 ## Future Development
 - Replace alerts with custom made modals
 - Score keeping
