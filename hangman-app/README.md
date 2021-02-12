@@ -20,8 +20,7 @@ Live site: https://vaganpogosyan.github.io/hangman-app/index.html
 * Responsive design
 
 ## Wireframe
-![Wireframe for hangman game]
-(vaganpogosyan.github.io/hangman-app/style/img/wireframe_for_hangman.jpg)
+![Wireframe for hangman game](vaganpogosyan.github.io/hangman-app/style/img/wireframe_for_hangman.jpg)
 
 
 ## Future Development
