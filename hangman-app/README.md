@@ -21,6 +21,7 @@ Live site: https://vaganpogosyan.github.io/hangman-app/index.html
 
 ## Wireframe
 ![Wireframe for hangman game]
+(vaganpogosyan.github.io/hangman-app/style/img/Wireframe for hangman.jpg)
 
 
 ## Future Development
