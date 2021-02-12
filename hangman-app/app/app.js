@@ -113,6 +113,9 @@ $(() => {
                     // show all the letters user didn't guess
                     $('.hidden-letter').removeClass('hidden-letter').addClass('missed-letter');
                     // $count = 0;
+
+
+
                     return;
                 }
             };

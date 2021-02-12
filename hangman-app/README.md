@@ -1,3 +1,10 @@
+Live site: https://vaganpogosyan.github.io/hangman-app/index.html
+
+
+
+
+
+
 Refernces:
 .one() - https://api.jquery.com/one/
 

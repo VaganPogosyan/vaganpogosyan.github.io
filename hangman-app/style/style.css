@@ -7,19 +7,27 @@ body {
 
 h1, h2 {
     text-align: center;
-    color:rgb(255, 204, 0);
+    /* color:rgb(255, 204, 0); */
 }
 
 h1 {
     margin-bottom: 0;
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgb(255, 204, 0);
+    width: 20%;
 }
 
 h2 {
     margin-top: 0;
+    color:rgb(255, 204, 0);
 }
 
 .container {
     /* border: 3px solid rgb(0, 255, 8); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .top-container {
@@ -30,7 +38,7 @@ h2 {
 }
 
 #div-image {
-    width: 40%;
+    width: 55%;
     /* border: 4px solid rgb(255, 204, 0); */
 }
 
@@ -45,8 +53,10 @@ h2 {
     padding: 5px 15px;
     border: 3px solid rgb(255, 204, 0);
     border-radius: 10px;
-    margin: 20px;
+    margin-bottom: 40px;
+    margin-right: 20px;
     color: white;
+    font-size: 150%;
 }
 
 #reset:hover,
@@ -74,6 +84,7 @@ h2 {
     margin: 20px;
     color:rgb(255, 255, 255);
     /* display: none; */
+    opacity: 0;
 }
 
 #hints {
@@ -154,4 +165,10 @@ h2 {
 
 .letter-selected {
     opacity: .2;
+}
+
+/* MODAL */
+
+.modal {
+    
 }
