@@ -67,12 +67,9 @@ $(() => {
                 }
             }
 
-            // console.log($('.word-letter').length + 1);
-            // console.log($('#word div').length);
-
             // if amount of shown letters equals to the amount of letters in the hidden word without the space - user wins
             if ($('#word div').length === $('.word-letter').length + 1) {
-                alert('Good job! To play again hit "Reset".');
+                setTimeout(() => { alert('Good job! To play again hit "Reset".') }, 100);
             }
 
             // array of images that will switch each time the user clicks on a wrong letter
@@ -81,7 +78,7 @@ $(() => {
             // if the hidden word doesn't "include" the clicked letter image shanges to the next in the array
             // every mistake adds up to variable "$count" so we could count how many mistakes user did
             if ($actor.text().includes($wordLetter.text()) === false) {
-                // console.log($count);
+                console.log($count);
                 if ($count === 0) {
                     $('#image').attr('src', $hangmanImages[0]);
                     $count = $count + 1;
@@ -113,19 +110,14 @@ $(() => {
                     // show all the letters user didn't guess
                     $('.hidden-letter').removeClass('hidden-letter').addClass('missed-letter');
                     // $count = 0;
-
-
-
                     return;
                 }
             };
         });
+        // buttons RESET 
+        $('#reset').on('click', resetGame);
     };
-
-    // buttons RESET 
-    $('#reset').on('click', resetGame);
 
     // buttons START 
     $('#start').one('click', startGame);
-
 });
