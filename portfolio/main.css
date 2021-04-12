@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    scroll-behavior: smooth;
+}
+
+body {
+    background:url(./resources/img/pexels-lukas-mayer-785429.jpeg);
+    background-position:center;
+    background-attachment: fixed;
+}
+
+.section-about {
+/* background: rgb(47, 239, 210); */
+background:url(./resources/img/pexels-lukas-mayer-785429.jpeg);
+background-position:center;
+background-attachment: fixed;
+height: 100vh;
+width: 100vw;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+ul {
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    min-width: 550px;
+    list-style: none;
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 55px;
+    margin-bottom: 24px;
+    font-family: 'Nothing You Could Do', cursive;
+    color:rgb(230, 230, 230);
+    font-weight: 100;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    width: 1000px;
+    background: rgb(255, 213, 0);
+}
+
+i {
+    font-size: 35px;
+    margin-bottom: 5px;
+    color:rgb(230, 230, 230);
+    margin-top: 30px;
+}
+
+.fa-file-download {
+    color: rgb(242, 41, 41);
+}
+
+.fa-basketball-ball {
+color: rgb(255, 140, 0);
+}
+
+.fa-linkedin {
+    /* color: #0e76a8; */
+    color: #1795d0;
+}
+
+.fa-github-square {
+    color: rgb(177, 103, 177);
+}
+
+#brand-statement {
+    padding: 20px;
+    /* border-top: 1px solid #00ffbb; */
+    /* border-bottom: 1px solid #00ffbb; */
+    width: 47%;
+    max-width: 1000px;
+    min-width: 600px;
+    /* margin-bottom: 40px; */
+    text-align: center;
+    font-size: 20px;
+    /* color: rgb(255, 225, 0); */
+    font-family: 'New Tegomin', serif;
+    /* font-family: 'Caveat'; */
+}
+
+li {
+    /* border: 1px solid #00ffbb; */
+    cursor: pointer;
+    width:70px;
+}
+
+a {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; 
+    color: rgb(255, 255, 255);
+    transition: 100ms;
+    font-family: 'Bebas Neue', cursive;
+}
+
+a:hover,
+a:active {
+    /* color:#fff700; */
+    transform: scale(1.05);
+}
+
+
+#projects-section {
+    background: linear-gradient(rgba(255, 0, 0, 0), #00000095 50%);
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.projects-container {
+
+}
+
+h2 {
+    margin-top: 60px;
+    font-family: 'Nothing You Could Do', cursive;
+    color:rgb(255, 255, 255);
+    font-weight: 100;
+    font-size: 40px;
+}
+
+.apps {
+    width: 300px;
+    filter: brightness(90%);
+    cursor: pointer;
+}
+
+.apps:hover {
+    filter: brightness(95%)
+}
+
+.apps-img {
+    border-radius: 2%;
+    /* border: 1px solid #ffffff; */
+    height: 200px;
+    width: 300px;
+    overflow:hidden;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.291);
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
