@@ -15,7 +15,7 @@ body {
 /* background: rgb(47, 239, 210); */
 background:url(./resources/img/pexels-lukas-mayer-785429.jpeg);
 background-position:center;
-background-attachment: fixed;
+background-attachment:fixed;
 height: 100vh;
 width: 100vw;
 display: flex;
@@ -46,7 +46,7 @@ h1 {
 hr {
     border: none;
     height: 1px;
-    width: 1000px;
+    width: 70%;
     background: rgb(255, 213, 0);
 }
 
@@ -95,7 +95,7 @@ li {
     width:70px;
 }
 
-a {
+.nav-link {
     display: flex;
     flex-direction:column;
     justify-content: center;
@@ -106,11 +106,29 @@ a {
     font-family: 'Bebas Neue', cursive;
 }
 
-a:hover,
-a:active {
+.nav-link:hover,
+.nav-link:active {
     /* color:#fff700; */
-    transform: scale(1.05);
+    transform: scale(1.1);
+    filter:brightness(120%);
 }
+
+
+
+
+#hello-world {
+    width: 100%;
+    color: rgba(228, 119, 23, 0.585);
+    font-size: 300px;
+    font-family: monospace;
+    position: absolute;
+    left: 1100px;
+    bottom: -950px;
+    display: block;
+    filter: blur(30px);
+}
+
+
 
 
 #projects-section {
@@ -121,16 +139,23 @@ a:active {
     justify-content: center;
 }
 
-.projects-container {
-
-}
 
 h2 {
-    margin-top: 60px;
+    margin-top: 35px;
     font-family: 'Nothing You Could Do', cursive;
     color:rgb(255, 255, 255);
     font-weight: 100;
     font-size: 40px;
+    text-align: center;
+}
+
+.app-box {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .apps {
@@ -140,7 +165,8 @@ h2 {
 }
 
 .apps:hover {
-    filter: brightness(95%)
+    filter: brightness(95%);
+    transform:scale(1.02);
 }
 
 .apps-img {
@@ -151,6 +177,8 @@ h2 {
     overflow:hidden;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.291);
 }
+
+
 
 @media only screen and (max-width: 600px) {
     body {
