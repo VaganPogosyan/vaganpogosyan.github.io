@@ -7,21 +7,35 @@
 
 body {
     background:url(./resources/img/pexels-lukas-mayer-785429.jpeg);
+    background-color: rgb(0, 255, 238);
+    background-blend-mode: multiply;  
     background-position:center;
     background-attachment: fixed;
 }
 
+.big-div {
+    /* background-color: rgba(0, 230, 188, 0.9); */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .section-about {
-/* background: rgb(47, 239, 210); */
-background:url(./resources/img/pexels-lukas-mayer-785429.jpeg);
-background-position:center;
-background-attachment:fixed;
-height: 100vh;
-width: 100vw;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+    /* background: rgb(47, 239, 210); */
+    /* background:url(./resources/img/pexels-lukas-mayer-785429.jpeg); */
+    background: rgba(2, 147, 132, 0.591);
+    background-position:center;
+    background-attachment:fixed;
+    height: 70vh;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top-left-radius: 500px;
+    border-bottom-right-radius: 500px;
 }
 
 ul {
@@ -35,14 +49,19 @@ ul {
     margin-bottom: 20px;
 }
 
+li {
+    /* background-color: rgb(0, 0, 0); */
+}
+
 h1 {
     font-size: 70px;
     font-weight: 100;
     margin-bottom: 24px;
     /* font-family: 'Nothing You Could Do', cursive; */
     font-family: 'Bebas Neue', serif;
+    /* font-family: 'Julius Sans One'; */
     /* color:rgb(240, 240, 240); */
-    color:rgb(255, 204, 0);
+    color:rgb(255, 255, 255);
     font-weight: 100;
 }
 
@@ -50,7 +69,7 @@ hr {
     border: none;
     height: 1px;
     width: 70%;
-    background: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
 }
 
 i {
@@ -61,19 +80,23 @@ i {
 }
 
 .fa-file-download {
-    color: rgb(242, 41, 41);
+    color: rgb(255, 255, 255);
 }
 
 .fa-basketball-ball {
-    color: rgb(255, 140, 0);
+    color: rgb(255, 255, 255);
 }
 
 .fa-linkedin {
-    color: #1795d0;
+    color: #000000;
 }
 
 .fa-github-square {
-    color: rgb(177, 103, 177);
+    color: rgb(0, 0, 0);
+}
+
+.fab, .fas{
+    color: rgb(0, 0, 0);
 }
 
 #brand-statement {
@@ -87,15 +110,16 @@ i {
     text-align: center;
     font-size: 19px;
     /* color: rgb(255, 225, 0); */
-    font-family: 'New Tegomin', serif;
-    /* font-family: 'Caveat'; */
-    background: linear-gradient(90deg ,rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.722) 25% 75%, rgba(255, 255, 255, 0));
+    /* font-family: 'New Tegomin', serif; */
+    font-family: 'Julius Sans One', serif;
+    /* background: linear-gradient(90deg ,rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.722) 25% 75%, rgba(255, 255, 255, 0)); */
 }
 
 li {
     /* border: 1px solid #00ffbb; */
     cursor: pointer;
     width:70px;
+    /* background: rgb(255, 255, 255); */
 }
 
 .nav-link {
@@ -106,14 +130,17 @@ li {
     text-decoration: none; 
     color: rgb(240, 240, 240);
     transition: 100ms;
-    font-family: 'Bebas Neue', cursive;
+    /* font-family: 'Bebas Neue', cursive; */
+    font-family: 'Julius Sans One';
+    /* font-family: 'Nothing You Could Do', cursive; */
+    font-size: 100%;
 }
 
 .nav-link:hover,
 .nav-link:active {
     /* color:#fff700; */
-    transform: scale(1.1);
-    filter:brightness(120%);
+    transform: scale(1.2);
+    /* filter:brightness(120%); */
 }
 
 
@@ -135,7 +162,8 @@ li {
 /* ===================== PROJECTS ===================== */
 
 #projects-section {
-    background: linear-gradient(rgba(255, 0, 0, 0), #00000095 50%);
+    /* background: linear-gradient(rgba(255, 0, 0, 0), #00000095 50%); */
+    /* background-color: #1795d0; */
     height: 100vh;
     display: flex;
     flex-direction: row;
@@ -163,6 +191,11 @@ h2 {
     /* justify-content:baseline; */
     /* align-items: center; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgba(2, 147, 132, 0.8);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 120px;
+
 }
 
 .app-text {
@@ -184,9 +217,10 @@ h2 {
     border-radius:10ex;
     padding: 5px 25px;
     transition: 100ms;
-    background-color: rgba(0, 0, 0, 0.462);
+    /* background-color: rgba(255, 255, 255); */
     border: 1px solid rgb(201, 114, 255);
-    color:rgb(201, 114, 255);
+    /* color:rgb(201, 114, 255); */
+    color:rgb(255, 255, 255);
     margin-right: 20px;
 }
 
@@ -197,7 +231,7 @@ h2 {
 }
 
 .app-text .live-website {
-    color:rgb(255, 140, 0);
+    /* color:rgb(255, 140, 0); */
     border: 1px solid rgb(255, 140, 0);
 }
 
