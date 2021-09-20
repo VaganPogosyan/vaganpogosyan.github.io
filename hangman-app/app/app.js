@@ -9,7 +9,7 @@ $(() => {
     }
 
     let $count = 0;
-
+    let $countOfResets = 0;
 
     // function RESET GAME
     const resetGame = () => {
@@ -19,6 +19,11 @@ $(() => {
         $('.missed-letter').remove();
         startGame();
         $('#image').attr('src', 'style/img/Hangman_Empty.jpg');
+
+        $count = 0;
+        console.log('game reseted')
+        $countOfResets++;
+        console.log('Count of resets = ' + $countOfResets);
     }
 
     // array with hidden words (names of famous actors)
@@ -26,6 +31,9 @@ $(() => {
 
     // function START
     const startGame = () => {
+        $count = 0;
+        console.log($count)
+
         $('.letter').removeClass('letter-selected');
         $('#start').addClass('start-clicked');
         // ***** add empty border-bottoms for each letter of the hidden word
@@ -79,54 +87,98 @@ $(() => {
             // if the hidden word doesn't "include" the clicked letter image changes to the next in the array
             // every mistake adds up to variable "$count" so we could count how many mistakes user made
             // if ($actor.text().includes($wordLetter.text()) === false) {
-            if ($actor.text().includes($wordLetter.text()) === false) {
-                console.log($count);
+            if ($actor.text().includes($wordLetter.text())) {
+                console.log('right letter')
+                console.log('old count = ', $count);
+
+            } else {
                 if ($count === 0) {
                     $('#image').attr('src', $hangmanImages[0]);
                     $count = $count + 1;
-                    console.log('next ' + $count);
-                    return;
+                    console.log($count);
+
                 } else if ($count === 1) {
                     $('#image').attr('src', $hangmanImages[1]);
                     $count = $count + 1;
-                    console.log('next ' + $count);
-                    return;
+                    console.log($count);
+
                 } else if ($count === 2) {
                     $('#image').attr('src', $hangmanImages[2]);
                     $count = $count + 1;
-                    console.log('next ' + $count);
-                    return;
+                    console.log($count);
+
                 } else if ($count === 3) {
                     $('#image').attr('src', $hangmanImages[3]);
                     $count = $count + 1;
-                    console.log('next ' + $count);
-                    return;
+                    console.log($count);
+
                 } else if ($count === 4) {
                     $('#image').attr('src', $hangmanImages[4]);
                     $count = $count + 1;
-                    console.log('next ' + $count);
-                    return;
+                    console.log($count);
+
                 } else if ($count === 5) {
                     $('#image').attr('src', $hangmanImages[5]);
                     $count = $count + 1;
-                    console.log('next ' + $count);
-                    return;
+                    console.log($count);
+
                 } else if ($count === 6) {
                     // if user makes 7 mistakes he looses the game
                     $('#image').attr('src', $hangmanImages[6]);
                     setTimeout(() => { alert('You Lost. Hit the "Reset" button to reset the game.') }, 100);
                     // show all the letters user didn't guess
                     $('.hidden-letter').removeClass('hidden-letter').addClass('missed-letter');
-                    $count = $count * 0;
+                    $count = 0;
                     console.log('next ' + $count);
                     return;
                 }
-            };
+            }
+
+
+
+            // switch ($count) {
+            //     case 0:
+            //         $('#image').attr('src', $hangmanImages[0]);
+            //         $count = $count + 1;
+            //         console.log($count);
+            //         break;
+            //     case 1:
+            //         $('#image').attr('src', $hangmanImages[0]);
+            //         $count = $count + 1;
+            //         console.log($count);
+            //         break;
+            //     case 2:
+            //         $('#image').attr('src', $hangmanImages[0]);
+            //         $count = $count + 1;
+            //         console.log($count);
+            //         break;
+            //     case 3:
+            //         $('#image').attr('src', $hangmanImages[0]);
+            //         $count = $count + 1;
+            //         console.log($count);
+            //         break;
+            //     case 4:
+            //         $('#image').attr('src', $hangmanImages[0]);
+            //         $count = $count + 1;
+            //         console.log($count);
+            //         break;
+            //     case 5:
+            //         $('#image').attr('src', $hangmanImages[0]);
+            //         $count = $count + 1;
+            //         console.log($count);
+            //         break;
+            //     case 6:
+            //         $('#image').attr('src', $hangmanImages[0]);
+            //         $count = $count + 1;
+            //         console.log($count);
+            //         break;
+            // }
+
         });
         // buttons RESET 
-        $('#reset').on('click', resetGame);
+        // $('#reset').on('click', resetGame);
     };
-
+    $('#reset').on('click', resetGame);
     // buttons START 
     $('#start').one('click', startGame);
 });
