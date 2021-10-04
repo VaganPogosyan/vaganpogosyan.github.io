@@ -100,6 +100,11 @@ i {
   color: rgb(0, 0, 0);
 }
 
+.nav-link:hover .fab,
+.nav-link:hover .fas {
+  color: rgb(72, 255, 221);
+}
+
 #brand-statement {
   padding: 20px;
   /* border-top: 1px solid #00ffbb; */
@@ -139,9 +144,9 @@ li {
 
 .nav-link:hover,
 .nav-link:active {
-  /* color:#fff700; */
+  /* color: #53eec5; */
   transform: scale(1.2);
-  /* filter:brightness(120%); */
+  /* filter: brightness(120%); */
 }
 
 #hello-world {
@@ -217,7 +222,7 @@ h2 {
   /* border: 1px solid rgb(240, 240, 240); */
   border-radius: 10ex;
   padding: 5px 25px;
-  transition: 100ms;
+  transition: 80ms;
   /* background-color: rgba(255, 255, 255); */
   border: 1px solid rgb(201, 114, 255);
   /* color:rgb(201, 114, 255); */
@@ -263,6 +268,35 @@ h2 {
 
 h5 {
   color: rgb(255, 169, 64);
+}
+
+#section-email {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0), black);
+  height: 150px;
+}
+
+.email {
+  height: 25px;
+  font-size: 1.7rem;
+  font-family: "Bebas Neue", serif;
+  text-decoration: none;
+  color: rgb(228, 228, 228);
+  border: 2px solid rgb(199, 199, 199);
+  border-radius: 10ex;
+  padding: 15px 50px 18px;
+  cursor: pointer;
+  transition: 80ms;
+  background-color: rgba(2, 147, 132, 0.153);
+  /* background: linear-gradient(rgba(0, 255, 238, 0.057), rgba(0, 0, 0, 0.242)); */
+}
+
+.email:hover {
+  transform: scale(1.1);
+  background-color: rgba(0, 255, 229, 0.365);
 }
 
 @media only screen and (max-width: 1200px) {
