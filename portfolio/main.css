@@ -230,6 +230,10 @@ h2 {
   margin-right: 20px;
 }
 
+.app-text .link {
+  margin-top: 15px;
+}
+
 .app-text a:hover {
   /* color: rgb(244, 226, 255); */
   border: 1px solid rgb(218, 157, 255);
